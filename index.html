@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Geisinger – Video Portfolio & Resume</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
+        <style>
         :root {
             --primary-bg: #10141a;
             --secondary-bg: #161b22;
@@ -162,6 +162,13 @@
             flex-shrink: 0;
             transition: width 0.25s, height 0.25s;
         }
+        /* Make the first three About Me photos much larger */
+        .about-item:nth-child(-n+3) img {
+            width: 190px;
+            height: 190px;
+            border-radius: 16px;
+            transition: width 0.25s, height 0.25s;
+        }
         .about-item img:hover {
             transform: scale(1.06);
             box-shadow: 0 8px 30px #00000080;
@@ -290,6 +297,10 @@
             .about-item img {
                 width: 80px;
                 height: 80px;
+            }
+            .about-item:nth-child(-n+3) img {
+                width: 120px;
+                height: 120px;
             }
         }
         @media (max-width: 500px) {
