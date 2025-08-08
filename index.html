@@ -60,16 +60,17 @@
             margin: 2rem auto 3rem auto;
             padding: 0 1.5rem;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 2.5rem;
             justify-content: space-between;
         }
 
         .portfolio {
-            flex: 1 1 55%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            margin-bottom: 0;
         }
 
         .video-card {
@@ -112,28 +113,29 @@
             line-height: 1.5;
         }
 
-        .side-panel {
-            flex: 1 1 47%;
+        .info-sections-row {
             display: flex;
-            flex-direction: column;
-            gap: 2.2rem;
-            min-width: 340px;
-            max-width: 540px;
-            margin-bottom: 2.5rem;
-            margin-left: auto;
+            gap: 2.5rem;
+            width: 100%;
+            justify-content: space-between;
         }
 
-        .about-me {
+        .about-me, .resume {
             background: var(--secondary-bg);
             border-radius: var(--border-radius);
-            padding: 2rem 2rem 1.7rem 2rem;
             box-shadow: var(--card-shadow);
             border: 1.5px solid #22283b;
+            padding: 2.2rem 2rem 2rem 2rem;
+            min-width: 340px;
+            max-width: 540px;
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 1.4rem;
+            flex: 1 1 47%;
         }
-        .about-me h2 {
+
+        .about-me h2, .resume h2 {
             margin-top: 0;
             font-family: 'Montserrat', Arial, sans-serif;
             font-size: 1.5rem;
@@ -197,29 +199,6 @@
             text-align: left;
         }
 
-        .resume {
-            background: var(--secondary-bg);
-            border-radius: var(--border-radius);
-            padding: 2.2rem 2rem 2rem 2rem;
-            box-shadow: var(--card-shadow);
-            border: 1.5px solid #22283b;
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            min-width: 340px;
-            max-width: 540px;
-        }
-        .resume h2 {
-            margin-top: 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--accent);
-            border-bottom: 2px solid #232936;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.3rem;
-            letter-spacing: 1px;
-        }
         .resume-section:not(:last-child) {
             margin-bottom: 1.1rem;
         }
@@ -267,26 +246,28 @@
             color: #fff9c4;
             background: #332e1a;
         }
-        /* Separation line for resume section */
         .resume-section hr {
             border: 0;
             border-top: 1px solid #232936;
             margin: 1.2rem 0;
         }
+
         @media (max-width: 1080px) {
             main {
-                flex-direction: column;
-                gap: 2.5rem;
                 max-width: 100vw;
             }
-            .portfolio, .side-panel, .resume {
+            .portfolio, .info-sections-row, .about-me, .resume {
                 max-width: 98vw;
                 min-width: unset;
                 margin: 0 auto;
             }
+            .info-sections-row {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
         }
         @media (max-width: 700px) {
-            .side-panel, .resume {
+            .about-me, .resume {
                 padding: 1.3rem 0.8rem 1.2rem 0.8rem;
                 max-width: 97vw;
             }
@@ -358,7 +339,7 @@
         </div>
     </section>
 
-    <section class="side-panel">
+    <div class="info-sections-row">
         <section class="about-me">
             <h2>About Me</h2>
             <div class="about-item">
@@ -397,7 +378,6 @@
 
         <section class="resume">
             <h2>Resume</h2>
-
             <div class="resume-section">
                 <h3>Jonathan Geisinger</h3>
                 <p><strong>Associate Producer | Creative Project Manager</strong></p>
@@ -408,7 +388,6 @@
                     Associate Producer with experience in game production, esports tournament operations, and localized marketing content. Adept at coordinating cross-functional teams for global game publishing and creative projects.
                 </p>
             </div>
-
             <div class="resume-section">
                 <h3>Summary of Qualifications</h3>
                 <ul>
@@ -418,7 +397,6 @@
                     <li><strong>Esports & Tournament Operations:</strong> Coordinated remote and live tournaments for major esports titles such as Call of Duty, Overwatch, and Halo MCC.</li>
                 </ul>
             </div>
-
             <div class="resume-section">
                 <h3>Experience</h3>
                 <p><strong>ZAM (Tencent)</strong> – Playa Vista, CA <em>October 2021 – June 2025</em></p>
@@ -433,50 +411,41 @@
                 <ul>
                     <li>Provided production support and client communication across NA/EU/China time zones; primary liaison for editors and stakeholders.</li>
                 </ul>
-
                 <h4>Some super cool projects I’ve worked on:</h4>
-
                 <p><strong>NIKKE</strong></p>
                 <ul>
                     <li>Technical Director for all major live streams to date (anniversaries, holidays); managed remote OBS streams via Restream.io across YouTube and Twitter.</li>
                     <li>Coordinated technical rehearsals, live execution, post-mortems, and viewership analytics.</li>
                 </ul>
-
                 <p><strong>PUBG MOBILE</strong></p>
                 <ul>
                     <li>Led video creative direction for four years; conceptualized and produced social content, memes, giveaways, monetization promos, and brand collaborations. (TikTok, YouTube, X, Instagram)</li>
                     <li>Managed creative for co-branded content (e.g., Dodge, Butterfinger, Dragon Ball Super) adhering to Krafton and sponsor guidelines.</li>
                     <li>Supported influencer live streams, esports-style broadcasts, roadshows, and VIP event filming.</li>
                 </ul>
-
                 <p><strong>Path of Exile 2 (PoE2)</strong></p>
                 <ul>
                     <li>Produced gameplay and live camera content from console playtests; led social content for Western EU community channels.</li>
                     <li>Localized content into French and German; collaborated with contractors on guide content.</li>
                     <li>Organized playtests and supported capture accounts for media creation.</li>
                 </ul>
-
                 <p><strong>LPL (League of Legends Pro League - NA Content)</strong></p>
                 <ul>
                     <li>Produced and edited daily highlight videos for LPL English Twitter; launched and grew LPL TikTok and YouTube Shorts presence.</li>
                     <li>Produced translations of mic checks and interviews; created NA-specific replays using dev tools.</li>
                 </ul>
-
                 <hr>
-
                 <p><strong>Community Gaming</strong> – Remote <em>February 2021 – October 2021</em></p>
                 <ul>
                     <li>Served as remote tournament admin for Call of Duty and Overwatch competitions.</li>
                     <li>Ensured seamless tournament operations and rule enforcement in virtual environments.</li>
                     <li>Supported event continuity and player engagement during pandemic restrictions.</li>
                 </ul>
-
                 <p><strong>DreamHack AB</strong> – Anaheim, CA <em>February 2020</em></p>
                 <ul>
                     <li>Oversaw bracket management and player coordination for live esports tournaments.</li>
                     <li>Delivered high-quality player experience through real-time decision-making and escalation handling.</li>
                 </ul>
-
                 <p><strong>Stony Brook Smash Bros.</strong> – Stony Brook, NY <em>May 2014 – January 2018</em></p>
                 <ul>
                     <li>Built and led collegiate Smash Bros. team to a Collegiate Starleague championship in 2016.</li>
@@ -484,7 +453,6 @@
                     <li>Competed for over a decade with notable wins (e.g., C9 Mango, multiple Top 100 players); featured at Genesis official livestream.</li>
                 </ul>
             </div>
-
             <div class="resume-section">
                 <h3>Education & Certifications</h3>
                 <ul>
@@ -494,7 +462,7 @@
                 </ul>
             </div>
         </section>
-    </section>
+    </div>
 </main>
 
 </body>
