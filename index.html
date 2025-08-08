@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jonathan Geisinger – Video Portfolio</title>
+<title>Jonathan Geisinger – Video Portfolio & Resume</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@
         color: #aaa;
         font-size: 1rem;
     }
-    .portfolio {
+    .portfolio, .resume {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -58,12 +58,40 @@
         font-size: 0.95rem;
         margin-bottom: 0;
     }
+    .resume {
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .resume h2 {
+        margin-top: 0;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #444;
+        padding-bottom: 0.5rem;
+    }
+    .resume-section {
+        margin-bottom: 1.5rem;
+    }
+    .resume-section h3 {
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+        color: #ffcc00;
+    }
+    .resume-section p, .resume-section li {
+        color: #ccc;
+        font-size: 0.95rem;
+    }
+    ul {
+        margin-top: 0.5rem;
+        padding-left: 1.2rem;
+    }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Jonathan Geisinger – Video Portfolio</h1>
+    <h1>Jonathan Geisinger – Video Portfolio & Resume</h1>
     <p>Selected works showcasing production, creative direction, and technical execution</p>
 </header>
 
@@ -115,6 +143,44 @@
             <h2>Nikke</h2>
             <p>Served as Technical Director and Project Producer for a high-profile livestream series.</p>
         </div>
+    </div>
+
+</section>
+
+<section class="resume">
+    <h2>Resume</h2>
+
+    <div class="resume-section">
+        <h3>Professional Summary</h3>
+        <p>Creative and detail-oriented producer with expertise in game capture, editing, localization, and live event technical direction. Experienced in delivering high-quality promotional content for AAA titles and global audiences.</p>
+    </div>
+
+    <div class="resume-section">
+        <h3>Experience</h3>
+        <ul>
+            <li><strong>Technical Director & Producer</strong> – Nikke Anniversary/Holiday Livestreams</li>
+            <li><strong>Producer & Localization Coordinator</strong> – Honor of Kings</li>
+            <li><strong>Creative Producer</strong> – Muscle Chicken Series</li>
+            <li><strong>Game Capture & Full Production</strong> – League of Legends, Path of Exile 2</li>
+            <li><strong>Production Assistant</strong> – PUBG Mobile Roadshow</li>
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h3>Skills</h3>
+        <ul>
+            <li>Game Capture & Editing (OBS, Adobe Premiere, After Effects)</li>
+            <li>Localization Management</li>
+            <li>Storyboarding & Creative Direction</li>
+            <li>Technical Livestream Production</li>
+            <li>3D Graphics Integration</li>
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h3>Contact</h3>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: <a href="#" style="color:#ffcc00;">linkedin.com/in/yourname</a></p>
     </div>
 
 </section>
