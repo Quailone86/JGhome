@@ -1,92 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jonathan Geisinger – Video Portfolio & Resume</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #111;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-    }
-    header {
-        text-align: center;
-        padding: 2rem;
-        background-color: #000;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2rem;
-        letter-spacing: 1px;
-    }
-    header p {
-        color: #aaa;
-        font-size: 1rem;
-    }
-    .portfolio, .resume {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        padding: 2rem;
-        max-width: 900px;
-        margin: auto;
-    }
-    .video-card {
-        background-color: #1a1a1a;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    iframe {
-        width: 100%;
-        height: 500px;
-        border: none;
-    }
-    .video-info {
-        padding: 1rem;
-    }
-    .video-info h2 {
-        margin-top: 0;
-        font-size: 1.4rem;
-    }
-    .video-info p {
-        color: #ccc;
-        font-size: 0.95rem;
-        margin-bottom: 0;
-    }
-    .resume {
-        background-color: #1a1a1a;
-        border-radius: 10px;
-        padding: 2rem;
-        box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-    .resume h2 {
-        margin-top: 0;
-        font-size: 1.6rem;
-        border-bottom: 2px solid #444;
-        padding-bottom: 0.5rem;
-    }
-    .resume-section {
-        margin-bottom: 1.5rem;
-    }
-    .resume-section h3 {
-        margin-bottom: 0.3rem;
-        font-size: 1.2rem;
-        color: #ffcc00;
-    }
-    .resume-section p, .resume-section li {
-        color: #ccc;
-        font-size: 0.95rem;
-    }
-    ul {
-        margin-top: 0.5rem;
-        padding-left: 1.2rem;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Geisinger – Video Portfolio & Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #10141a;
+            --secondary-bg: #161b22;
+            --accent: #ffcc00;
+            --text-main: #f3f6fa;
+            --text-sub: #b3bac6;
+            --card-shadow: 0 6px 32px rgba(0,0,0,0.6);
+            --border-radius: 14px;
+            --max-width: 950px;
+            --transition: 0.3s cubic-bezier(.4,0,.2,1);
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: var(--primary-bg);
+            color: var(--text-main);
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        body {
+            background: linear-gradient(120deg, #10141a 60%, #1e222d 100%);
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem 1rem;
+            background: linear-gradient(90deg, #161b22 80%, #212736 100%);
+            border-bottom: 2px solid #232936;
+            box-shadow: 0 1px 12px 0 rgba(0,0,0,0.25);
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 2.7rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            text-shadow: 0 2px 16px #00000050;
+        }
+        header p {
+            color: var(--text-sub);
+            font-size: 1.15rem;
+            margin-top: 1rem;
+            font-family: 'Roboto', Arial, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 2rem auto 3rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            justify-content: space-between;
+        }
+
+        .portfolio {
+            flex: 1 1 55%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .video-card {
+            background: var(--secondary-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1.5px solid #22283b;
+            display: flex;
+            flex-direction: column;
+        }
+        .video-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 40px 0 #000000aa;
+            border-color: var(--accent);
+        }
+        .video-card iframe {
+            width: 100%;
+            min-height: 330px;
+            max-height: 410px;
+            border: none;
+            background: #000;
+        }
+        .video-info {
+            padding: 1.2rem 1.5rem 1.3rem 1.5rem;
+        }
+        .video-info h2 {
+            margin: 0 0 0.3rem 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.28rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+        .video-info p {
+            color: var(--text-sub);
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .resume {
+            flex: 1 1 40%;
+            background: var(--secondary-bg);
+            border-radius: var(--border-radius);
+            padding: 2.2rem 2rem 2rem 2rem;
+            box-shadow: var(--card-shadow);
+            border: 1.5px solid #22283b;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            min-width: 340px;
+            max-width: 430px;
+            margin-bottom: 2.5rem;
+            margin-left: auto;
+        }
+        .resume h2 {
+            margin-top: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            border-bottom: 2px solid #232936;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.3rem;
+            letter-spacing: 1px;
+        }
+        .resume-section:not(:last-child) {
+            margin-bottom: 1.1rem;
+        }
+        .resume-section h3 {
+            margin-bottom: 0.15rem;
+            font-size: 1.12rem;
+            color: var(--accent);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 600;
+        }
+        .resume-section h4 {
+            color: #ffedb3;
+            font-size: 1rem;
+            margin: 0.9rem 0 0.4rem 0;
+            font-weight: 600;
+            font-family: 'Montserrat', Arial, sans-serif;
+            letter-spacing: 1px;
+        }
+        .resume-section p, .resume-section li {
+            color: var(--text-sub);
+            font-size: 0.97rem;
+            margin: 0.2rem 0;
+        }
+        .resume-section strong { color: var(--text-main); }
+        .resume-section em {
+            color: #e2e2e2;
+            font-style: italic;
+            font-size: 0.96em;
+        }
+        .resume-section ul {
+            margin: 0.2rem 0 0.7rem 1.2rem;
+            padding: 0 0 0 1.1rem;
+        }
+        .resume-section ul li {
+            margin-bottom: 0.28rem;
+            line-height: 1.5;
+        }
+        .resume-section a {
+            color: var(--accent);
+            text-decoration: underline;
+            transition: color var(--transition);
+            font-weight: 500;
+        }
+        .resume-section a:hover {
+            color: #fff9c4;
+            background: #332e1a;
+        }
+        @media (max-width: 1080px) {
+            main {
+                flex-direction: column;
+                gap: 2.5rem;
+                max-width: 100vw;
+            }
+            .portfolio, .resume {
+                max-width: 98vw;
+                min-width: unset;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 700px) {
+            .resume {
+                padding: 1.3rem 0.8rem 1.2rem 0.8rem;
+                max-width: 97vw;
+            }
+            .video-card iframe {
+                min-height: 220px;
+                max-height: 260px;
+            }
+            .video-info { padding: 1rem 0.7rem 1rem 0.7rem; }
+        }
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.7px;
+            }
+            header { padding: 1.5rem 0.5rem 1.2rem 0.5rem; }
+        }
+    </style>
 </head>
 <body>
 
@@ -95,154 +224,149 @@
     <p>Selected works showcasing production, creative direction, and technical execution</p>
 </header>
 
-<section class="portfolio">
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/1ksAAY8r-cI" allowfullscreen></iframe>
-        <div class="video-info">
-            <h2>PUBG Mobile Roadshow</h2>
-            <p>Provided game capture and assisted with production duties for a large-scale roadshow campaign.</p>
+<main>
+    <section class="portfolio">
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/1ksAAY8r-cI" title="PUBG Mobile Roadshow" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>PUBG Mobile Roadshow</h2>
+                <p>Provided game capture and assisted with production duties for a large-scale roadshow campaign.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/Q1vliwIF_14" allowfullscreen></iframe>
-        <div class="video-info">
-            <h2>Muscle Chicken Series</h2>
-            <p>Served as Creative Producer and contributed to storyboarding for a comedic branded content series.</p>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/Q1vliwIF_14" title="Muscle Chicken Series" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Muscle Chicken Series</h2>
+                <p>Served as Creative Producer and contributed to storyboarding for a comedic branded content series.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ulO38SyZ4V0" allowfullscreen></iframe>
-        <div class="video-info">
-            <h2>League of Legends</h2>
-            <p>Managed game capture, editing, and full production for an esports-focused campaign piece.</p>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/ulO38SyZ4V0" title="League of Legends" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>League of Legends</h2>
+                <p>Managed game capture, editing, and full production for an esports-focused campaign piece.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/qDHdTWkdoeE" allowfullscreen></iframe>
-        <div class="video-info">
-            <h2>Honor of Kings</h2>
-            <p>Produced promotional materials and coordinated localization to reach global audiences.</p>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/qDHdTWkdoeE" title="Honor of Kings" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Honor of Kings</h2>
+                <p>Produced promotional materials and coordinated localization to reach global audiences.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/qpSiAiZyIn0" allowfullscreen></iframe>
-        <div class="video-info">
-            <h2>Path of Exile 2</h2>
-            <p>Directed capture, editing, and custom 3D graphics while overseeing localization for a worldwide reveal.</p>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/qpSiAiZyIn0" title="Path of Exile 2" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Path of Exile 2</h2>
+                <p>Directed capture, editing, and custom 3D graphics while overseeing localization for a worldwide reveal.</p>
+            </div>
         </div>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/6vO9vY4nE3A" allowfullscreen></iframe>
-        <div class="video-info">
-            <h2>Nikke</h2>
-            <p>Served as Technical Director and Project Producer for a high-profile livestream series.</p>
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/6vO9vY4nE3A" title="Nikke" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Nikke</h2>
+                <p>Served as Technical Director and Project Producer for a high-profile livestream series.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-</section>
+    <section class="resume">
+        <h2>Resume</h2>
 
-<section class="resume">
-    <h2>Resume</h2>
+        <div class="resume-section">
+            <h3>Jonathan Geisinger</h3>
+            <p><strong>Associate Producer | Creative Project Manager</strong></p>
+            <p>Los Angeles, CA | jonathan.geisinger@gmail.com | 347-804-1133 | 
+                <a href="https://www.linkedin.com/in/jonathan-geisinger-venti/" target="_blank" rel="noopener">LinkedIn Profile</a>
+            </p>
+            <p>
+                Associate Producer with experience in game production, esports tournament operations, and localized marketing content. Adept at coordinating cross-functional teams for global game publisher campaigns and live events. 
+            </p>
+        </div>
 
-    <div class="resume-section">
-        <h3>Jonathan Geisinger</h3>
-        <p>Associate Producer | Creative Project Manager</p>
-        <p>Los Angeles, CA | jonathan.geisinger@gmail.com | 347-804-1133 | <a href="https://www.linkedin.com/in/jonathan-geisinger-venti/" style="color:#ffcc00;">LinkedIn Profile</a></p>
+        <div class="resume-section">
+            <h3>Summary of Qualifications</h3>
+            <ul>
+                <li><strong>Game Production Expertise:</strong> Led capture teams and provided full producer support for Tencent AAA mobile and PC titles including PUBG: MOBILE, Honor of Kings, and Path of Exile 2.</li>
+                <li><strong>Cross-Functional Collaboration:</strong> Managed internal and external stakeholders, including localization teams, editors, and brand managers to deliver polished video content and live events.</li>
+                <li><strong>Marketing & Content Strategy:</strong> Developed localized content for the North American market and supported social media initiatives across various platforms.</li>
+                <li><strong>Esports & Tournament Operations:</strong> Coordinated remote and live tournaments for major esports titles such as Call of Duty, Overwatch, and Halo MCC.</li>
+            </ul>
+        </div>
 
-        <p>Associate Producer with experience in game production, esports tournament operations, and localized marketing content. Adept at coordinating cross-functional teams for global game publishers and agencies, with a proven track record supporting major titles such as PUBG: MOBILE and Path of Exile 2. Strong background in event production, gameplay capture, and community-driven programming across PC and console platforms.</p>
-    </div>
+        <div class="resume-section">
+            <h3>Experience</h3>
+            <p><strong>ZAM (Tencent)</strong> – Playa Vista, CA <em>October 2021 – June 2025</em></p>
+            <p><strong>Associate Producer / Lead Game Capture</strong> <em>(Oct 2022 – June 2025)</em></p>
+            <ul>
+                <li>Supported campaign development for top titles: Path of Exile 2, PUBG: MOBILE, and GODDESS OF VICTORY: NIKKE.</li>
+                <li>Led capture team to create culturally relevant content tailored to North American audiences.</li>
+                <li>Managed a team of gameplay capture specialists and editors to deliver assets for partner studios.</li>
+                <li>Oversaw support for global franchises such as League of Legends (LPL), Honor of Kings, and NBA Infinite.</li>
+            </ul>
+            <p><strong>Production Assistant</strong> <em>(Oct 2021 – Oct 2022)</em></p>
+            <ul>
+                <li>Provided production support and client communication across NA/EU/China time zones; primary liaison for editors and stakeholders.</li>
+            </ul>
 
-    <div class="resume-section">
-        <h3>Summary of Qualifications</h3>
-        <ul>
-            <li>Game Production Expertise: Led capture teams and provided full producer support for Tencent AAA mobile and PC titles including PUBG: MOBILE, Honor of Kings, and Path of Exile 2.</li>
-            <li>Cross-Functional Collaboration: Managed internal and external stakeholders, including localization teams, editors, and brand managers to deliver polished video content and live events.</li>
-            <li>Marketing & Content Strategy: Developed localized content for the North American market and supported social media initiatives across various platforms.</li>
-            <li>Esports & Tournament Operations: Coordinated remote and live tournaments for major esports titles such as Call of Duty, Overwatch, and Halo MCC.</li>
-        </ul>
-    </div>
+            <h4>Some super cool projects I’ve worked on:</h4>
 
-    <div class="resume-section">
-        <h3>Experience</h3>
+            <p><strong>NIKKE</strong></p>
+            <ul>
+                <li>Technical Director for all major live streams to date (anniversaries, holidays); managed remote OBS streams via Restream.io across YouTube and Twitter.</li>
+                <li>Coordinated technical rehearsals, live execution, post-mortems, and viewership analytics.</li>
+            </ul>
 
-        <p><strong>ZAM (Tencent) – Playa Vista, CA</strong> <em>October 2021 – June 2025</em></p>
-        <p><strong>Associate Producer / Lead Game Capture</strong> (Oct 2022 – June 2025)</p>
-        <ul>
-            <li>Supported campaign development for top titles: Path of Exile 2, PUBG: MOBILE, and GODDESS OF VICTORY: NIKKE.</li>
-            <li>Led capture team to create culturally relevant content tailored to North American audiences.</li>
-            <li>Managed a team of gameplay capture specialists and editors to deliver assets for partner studios.</li>
-            <li>Oversaw support for global franchises such as League of Legends (LPL), Honor of Kings, and NBA Infinite.</li>
-        </ul>
+            <p><strong>PUBG MOBILE</strong></p>
+            <ul>
+                <li>Led video creative direction for four years; conceptualized and produced social content, memes, giveaways, monetization promos, and brand collaborations. (TikTok, YouTube, X, Instagram)</li>
+                <li>Managed creative for co-branded content (e.g., Dodge, Butterfinger, Dragon Ball Super) adhering to Krafton and sponsor guidelines.</li>
+                <li>Supported influencer live streams, esports-style broadcasts, roadshows, and VIP event filming.</li>
+            </ul>
 
-        <p><strong>Production Assistant</strong> (Oct 2021 – Oct 2022)</p>
-        <ul>
-            <li>Provided production support and client communication across NA/EU/China time zones; primary liaison for editors and stakeholders.</li>
-        </ul>
+            <p><strong>Path of Exile 2 (PoE2)</strong></p>
+            <ul>
+                <li>Produced gameplay and live camera content from console playtests; led social content for Western EU community channels.</li>
+                <li>Localized content into French and German; collaborated with contractors on guide content.</li>
+                <li>Organized playtests and supported capture accounts for media creation.</li>
+            </ul>
 
-        <h4>Some super cool projects I’ve worked on:</h4>
-        <p><strong>NIKKE</strong></p>
-        <ul>
-            <li>Technical Director for all major live streams to date (anniversaries, holidays); managed remote OBS streams via Restream.io across YouTube and Twitter.</li>
-            <li>Coordinated technical rehearsals, live execution, post-mortems, and viewership analytics.</li>
-        </ul>
+            <p><strong>LPL (League of Legends Pro League - NA Content)</strong></p>
+            <ul>
+                <li>Produced and edited daily highlight videos for LPL English Twitter; launched and grew LPL TikTok and YouTube Shorts presence.</li>
+                <li>Produced translations of mic checks and interviews; created NA-specific replays using dev tools.</li>
+            </ul>
 
-        <p><strong>PUBG MOBILE</strong></p>
-        <ul>
-            <li>Led video creative direction for four years; conceptualized and produced social content, memes, giveaways, monetization promos, and brand collaborations. (TikTok, YouTube, X, Instagram, Facebook)</li>
-            <li>Managed creative for co-branded content (e.g., Dodge, Butterfinger, Dragon Ball Super) adhering to Krafton and sponsor guidelines.</li>
-            <li>Supported influencer live streams, esports-style broadcasts, roadshows, and VIP event filming.</li>
-        </ul>
+            <p><strong>Community Gaming</strong> – Remote <em>February 2021 – October 2021</em></p>
+            <ul>
+                <li>Served as remote tournament admin for Call of Duty and Overwatch competitions.</li>
+                <li>Ensured seamless tournament operations and rule enforcement in virtual environments.</li>
+                <li>Supported event continuity and player engagement during pandemic restrictions.</li>
+            </ul>
 
-        <p><strong>Path of Exile 2 (PoE2)</strong></p>
-        <ul>
-            <li>Produced gameplay and live camera content from console playtests; led social content for Western EU community channels.</li>
-            <li>Localized content into French and German; collaborated with contractors on guide content.</li>
-            <li>Organized playtests and supported capture accounts for media creation.</li>
-        </ul>
+            <p><strong>DreamHack AB</strong> – Anaheim, CA <em>February 2020</em></p>
+            <ul>
+                <li>Oversaw bracket management and player coordination for live esports tournaments.</li>
+                <li>Delivered high-quality player experience through real-time decision-making and escalation handling.</li>
+            </ul>
 
-        <p><strong>LPL (League of Legends Pro League - NA Content)</strong></p>
-        <ul>
-            <li>Produced and edited daily highlight videos for LPL English Twitter; launched and grew LPL TikTok and YouTube Shorts presence.</li>
-            <li>Produced translations of mic checks and interviews; created NA-specific replays using dev tools.</li>
-        </ul>
+            <p><strong>Stony Brook Smash Bros.</strong> – Stony Brook, NY <em>May 2014 – January 2018</em></p>
+            <ul>
+                <li>Built and led collegiate Smash Bros. team to a Collegiate Starleague championship in 2016.</li>
+                <li>Organized and executed campus-wide esports events and community tournaments.</li>
+                <li>Competed for over a decade with notable wins (e.g., C9 Mango, multiple Top 100 players); featured at Genesis official livestream.</li>
+            </ul>
+        </div>
 
-        <p><strong>Community Gaming – Remote</strong> <em>February 2021 – October 2021</em></p>
-        <ul>
-            <li>Served as remote tournament admin for Call of Duty and Overwatch competitions.</li>
-            <li>Ensured seamless tournament operations and rule enforcement in virtual environments.</li>
-            <li>Supported event continuity and player engagement during pandemic restrictions.</li>
-        </ul>
-
-        <p><strong>DreamHack AB – Anaheim, CA</strong> <em>February 2020</em></p>
-        <ul>
-            <li>Oversaw bracket management and player coordination for live esports tournaments.</li>
-            <li>Delivered high-quality player experience through real-time decision-making and escalation handling.</li>
-        </ul>
-
-        <p><strong>Stony Brook Smash Bros. – Stony Brook, NY</strong> <em>May 2014 – January 2018</em></p>
-        <ul>
-            <li>Built and led collegiate Smash Bros. team to a Collegiate Starleague championship in 2016.</li>
-            <li>Organized and executed campus-wide esports events and community tournaments.</li>
-            <li>Competed for over a decade with notable wins (e.g., C9 Mango, multiple Top 100 players); featured at Genesis official livestream.</li>
-        </ul>
-    </div>
-
-    <div class="resume-section">
-        <h3>Education & Certifications</h3>
-        <ul>
-            <li>UC Irvine – Certificate Course, Esports Project Management</li>
-            <li>Stony Brook University – Information Systems, Writing, Japanese Studies</li>
-        </ul>
-    </div>
-
-    
-</section>
+        <div class="resume-section">
+            <h3>Education & Certifications</h3>
+            <ul>
+                <li>UC Irvine – Certificate Course, Esports Project Management</li>
+                <li>Stony Brook University – Information Systems, Writing, Japanese Studies</li>
+            </ul>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>
