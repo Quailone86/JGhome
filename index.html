@@ -163,11 +163,21 @@
             flex-shrink: 0;
             transition: width 0.25s, height 0.25s;
         }
-        /* Make the first three About Me photos much larger */
-        .about-item:nth-child(-n+3) img {
+        /* Make the first two About Me photos much larger */
+        .about-item:nth-child(-n+2) img {
             width: 190px;
             height: 190px;
             border-radius: 16px;
+            transition: width 0.25s, height 0.25s;
+        }
+        /* Japan Traveler photo: match the default size (not large) */
+        .about-item.japan-photo img {
+            width: 110px;
+            height: 110px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px #00000060;
+            background: #1a1a1a;
+            flex-shrink: 0;
             transition: width 0.25s, height 0.25s;
         }
         .about-item img:hover {
@@ -191,16 +201,16 @@
             line-height: 1.45;
         }
 
-        /* Coffee section header style to match About/Resume */
-        .about-me > div > h2 {
+        /* Coffee section header style to match About/Resume, but not full section */
+        .coffee-section-title {
             margin-top: 0;
             font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.12rem;
             font-weight: 600;
             color: var(--accent);
-            border-bottom: 2px solid #232936;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.3rem;
+            /* no border-bottom */
+            padding-bottom: 0;
+            margin-bottom: 0.8rem;
             letter-spacing: 1px;
         }
 
@@ -313,9 +323,13 @@
                 width: 80px;
                 height: 80px;
             }
-            .about-item:nth-child(-n+3) img {
+            .about-item:nth-child(-n+2) img {
                 width: 120px;
                 height: 120px;
+            }
+            .about-item.japan-photo img {
+                width: 80px;
+                height: 80px;
             }
         }
         @media (max-width: 500px) {
@@ -397,7 +411,7 @@
                     <div class="about-desc">Power ranked in SoCal and other regions—my love of competitive gaming knows no bounds.</div>
                 </div>
             </div>
-            <div class="about-item">
+            <div class="about-item japan-photo">
                 <img src="images/salute jg.jpg" alt="Salute in front of Jonathan's Coffee & Restaurant in Japan">
                 <div class="about-text">
                     <div class="about-title">Japan Traveler</div>
@@ -405,7 +419,7 @@
                 </div>
             </div>
             <div>
-                <h2>Coffee</h2>
+                <div class="coffee-section-title">Coffee</div>
                 <div class="coffee-grid">
                     <img src="images/coffee1.jpg" alt="Latte art and affogato at 'here' cafe" class="coffee1">
                     <img src="images/coffee2.jpg" alt="Two lattes with latte art and cheesecake" class="coffee2">
@@ -427,14 +441,14 @@
                     <a href="https://www.linkedin.com/in/jonathan-geisinger-venti/" target="_blank" rel="noopener">LinkedIn Profile</a>
                 </p>
                 <p>
-                    Associate Producer with experience in game production, esports tournament operations, and localized marketing content. Adept at coordinating cross-functional teams for global game campaigns and delivering creative solutions under tight deadlines.
+                    Associate Producer with experience in game production, esports tournament operations, and localized marketing content. Adept at coordinating cross-functional teams for global game [...]
                 </p>
             </div>
             <div class="resume-section">
                 <h3>Summary of Qualifications</h3>
                 <ul>
-                    <li><strong>Game Production Expertise:</strong> Led capture teams and provided full producer support for Tencent AAA mobile and PC titles including PUBG: MOBILE, Honor of Kings, and Path of Exile 2.</li>
-                    <li><strong>Cross-Functional Collaboration:</strong> Managed internal and external stakeholders, including localization teams, editors, and brand managers to deliver polished video campaigns.</li>
+                    <li><strong>Game Production Expertise:</strong> Led capture teams and provided full producer support for Tencent AAA mobile and PC titles including PUBG: MOBILE, Honor of Kings, an[...]
+                    <li><strong>Cross-Functional Collaboration:</strong> Managed internal and external stakeholders, including localization teams, editors, and brand managers to deliver polished video[...]
                     <li><strong>Marketing & Content Strategy:</strong> Developed localized content for the North American market and supported social media initiatives across various platforms.</li>
                     <li><strong>Esports & Tournament Operations:</strong> Coordinated remote and live tournaments for major esports titles such as Call of Duty, Overwatch, and Halo MCC.</li>
                 </ul>
@@ -461,7 +475,7 @@
                 </ul>
                 <p><strong>PUBG MOBILE</strong></p>
                 <ul>
-                    <li>Led video creative direction for four years; conceptualized and produced social content, memes, giveaways, monetization promos, and brand collaborations. (TikTok, YouTube, X, Instagram, Facebook)</li>
+                    <li>Led video creative direction for four years; conceptualized and produced social content, memes, giveaways, monetization promos, and brand collaborations. (TikTok, YouTube, X, I[...]
                     <li>Managed creative for co-branded content (e.g., Dodge, Butterfinger, Dragon Ball Super) adhering to Krafton and sponsor guidelines.</li>
                     <li>Supported influencer live streams, esports-style broadcasts, roadshows, and VIP event filming.</li>
                 </ul>
