@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jonathan Geisinger – Video Portfolio</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    header {
+        text-align: center;
+        padding: 2rem;
+        background-color: #000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    header p {
+        color: #aaa;
+        font-size: 1rem;
+    }
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+    }
+    .video-card {
+        background-color: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+    }
+    .video-info {
+        padding: 1rem;
+    }
+    .video-info h2 {
+        margin-top: 0;
+        font-size: 1.4rem;
+    }
+    .video-info p {
+        color: #ccc;
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Jonathan Geisinger – Video Portfolio</h1>
+    <p>Selected works showcasing production, creative direction, and technical execution</p>
+</header>
+
+<section class="portfolio">
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/1ksAAY8r-cI" allowfullscreen></iframe>
+        <div class="video-info">
+            <h2>PUBG Mobile Roadshow</h2>
+            <p>Provided game capture and assisted with production duties for a large-scale roadshow campaign.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/Q1vliwIF_14" allowfullscreen></iframe>
+        <div class="video-info">
+            <h2>Muscle Chicken Series</h2>
+            <p>Served as Creative Producer and contributed to storyboarding for a comedic branded content series.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/ulO38SyZ4V0" allowfullscreen></iframe>
+        <div class="video-info">
+            <h2>League of Legends</h2>
+            <p>Managed game capture, editing, and full production for an esports-focused campaign piece.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/qDHdTWkdoeE" allowfullscreen></iframe>
+        <div class="video-info">
+            <h2>Honor of Kings</h2>
+            <p>Produced promotional materials and coordinated localization to reach global audiences.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/qpSiAiZyIn0" allowfullscreen></iframe>
+        <div class="video-info">
+            <h2>Path of Exile 2</h2>
+            <p>Directed capture, editing, and custom 3D graphics while overseeing localization for a worldwide reveal.</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/6vO9vY4nE3A" allowfullscreen></iframe>
+        <div class="video-info">
+            <h2>Nikke</h2>
+            <p>Served as Technical Director and Project Producer for a high-profile livestream series.</p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
